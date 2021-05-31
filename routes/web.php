@@ -20,3 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware(['auth'])->group(function(){
+
+    Route::get('/users','UserController@index');
+    Route::get('/rooms','RoomController@index');
+    Route::get('/departments','DepartmentController@index');
+    Route::get('/employees','EmployeeController@index');
+    Route::get('/salaries','SalaryController@index');
+});
