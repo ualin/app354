@@ -22,7 +22,12 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
+axios.defaults.withCredentials = true;
+// XMLHttpRequest.prototype.origOpen = XMLHttpRequest.prototype.open;
+//         XMLHttpRequest.prototype.open   = function () {
+//             this.origOpen.apply(this, arguments);
+//             this.setRequestHeader('X-CSRF-TOKEN', window.Laravel.csrfToken);
+//         };
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
