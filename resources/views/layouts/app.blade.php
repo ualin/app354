@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script>window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!};</script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -33,7 +34,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="users">users <span class="sr-only">users</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rooms">rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="departments">departments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="employees">employees</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="salaries">salaries</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
